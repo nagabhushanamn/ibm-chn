@@ -1,0 +1,30 @@
+
+bank-txr
+---------
+
+// Model (business-data)
+	
+	 - Customer
+	 - Account
+	 - Txn
+	 
+-------------------------------
+
+Layer(s)
+
+	a. data/repository layer  : persisting-logic	 
+	
+	   - AccountRepository
+	
+	b. service-layer          : processing-logic
+	
+	   - TxrService	
+	
+	c. web-layer              : http req & resp logic
+	
+	  - TxrController
+	  
+	
+--------------------------------
+
+	
