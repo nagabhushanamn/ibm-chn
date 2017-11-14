@@ -26,15 +26,63 @@ b. service-Layer
 Spring MVC
 -------------
 
+//--------------------------------------------
+
  How to map Request to Handler(s)  ?
 
    --> by path
    --> by http method
-   --> by presence/absence of req-parametars
+   --> by presence/absence of req-params
    --> by presence/absence of req-headers
    --> by request media-type ( Content-Type )
    
 ----------------------------------------------   
+
+
+ possible arguments to request-mapping-methods!
+ 
+ 
+  -> @RequestParam
+  -> @ModelAttribute
+  -> @RequestBody
+  -> BindingResult
+  -> HttpServletRequest | HttpServletRespone | HttpSession
+  -> Principal
+  -> @HeaderValue
+  -> @CookieValue  
+  -> @PathVariable   e.g /path/123/path
+  -> @MatrixVariable
+  -> Locale
+  
+   .....
+ 
+ ------------------------------------------------
+ 
+ 
+ possible return-values from request-mapping-methods!
+ 
+ 
+  -> ModelAndView
+  -> String
+  -> void
+  
+  ....
+  
+  -------------------------------------------------
+  
+  
+  ContentNeglotioation Resolver
+  
+    --> url extension i.e  resource.html
+    
+    or
+    
+    --> Accept header
+  
+  
+  
+   
+
  
 
 

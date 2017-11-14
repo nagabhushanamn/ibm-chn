@@ -1,10 +1,13 @@
 package com.example.demo.web;
 
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,8 +21,8 @@ import com.example.demo.model.Product;
 @Controller
 public class DemoController {
 	
-	@Autowired
-	private ProductFormValidator validator;
+//	@Autowired
+//	private ProductFormValidator validator;
 
 //	@RequestMapping(value = "/ex/products", method = RequestMethod.GET)
 //	public @ResponseBody String m1() {
@@ -72,13 +75,43 @@ public class DemoController {
 	
 	// --------------------------------------------------------------
 	
-	@RequestMapping(value = "/ex/products", method = RequestMethod.POST,consumes= {"application/json","application/xml"})
-	public @ResponseBody String m6(@Valid @RequestBody Product product,BindingResult result) {
-		//validator.validate(product, result);
-		if(result.hasErrors()) {
-			return result.toString();
-		}
-		return product.toString();
+//	@RequestMapping(value = "/ex/products", method = RequestMethod.POST,consumes= {"application/json","application/xml"})
+//	public @ResponseBody String m6(@Valid @RequestBody Product product,BindingResult result) {
+//		//validator.validate(product, result);
+//		if(result.hasErrors()) {
+//			return result.toString();
+//		}
+//		return product.toString();
+//	}
+	
+	// --------------------------------------------------------------
+	
+//	@RequestMapping(value="/req")
+//	public String m7() {
+//		System.out.println("req..");
+//		return "redirect:index.html";
+//	}
+	
+
+	// --------------------------------------------------------------
+	
+
+//	@RequestMapping(value="/req")
+//	public String m7(Model model) {
+//		model.addAttribute("message", "Welcome to Spring MVC");
+//		return "pm";
+//	}
+	
+	
+//	@RequestMapping(value="/req")
+//	public String m7(Map<String,String> model) {
+//		model.put("message", "Welcome to Spring MVC");
+//		return "pm";
+//	}
+	
+	@RequestMapping(value="/req")
+	public void m7(Model model) {
+		model.addAttribute("message", "Welcome to Spring MVC");
 	}
 	
 	
