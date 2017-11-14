@@ -1,0 +1,47 @@
+
+
+
+// Model
+
+	- Product
+	- Review
+	
+------------------------------------------	
+a. repository-Layer
+
+   - ProductRepository
+   - ReviewRepository
+   ..
+   
+-------------------------------------------  
+b. service-Layer
+
+-------------------------------------------
+
+
+
+
+
+
+Spring MVC
+-------------
+
+ How to map Request to Handler(s)  ?
+
+   --> by path
+   --> by http method
+   --> by presence/absence of req-parametars
+   --> by presence/absence of req-headers
+   --> by request media-type ( Content-Type )
+   
+----------------------------------------------   
+ 
+
+
+
+
+
+
+
+
+
